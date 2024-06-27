@@ -2,7 +2,7 @@
 {
     public class Avaliacao
     {
-        public int Id { get; set; }
+        public int AvaliacaoId { get; set; }
         public int ProdutoId { get; set; }
         public Produto? Produto { get; set; }
 

@@ -1,4 +1,4 @@
-﻿/*using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using LojaPeçasEletronicas.Data;
@@ -8,17 +8,16 @@ namespace LojaPeçasEletronicas.services
 {
     public class ProdutoService : IProdutoService
     {
-        private readonly ApplicationDbContext _context;
+        private readonly LojaPeçasEletronicasContext _context;
 
-        public ProdutoService(ApplicationDbContext context)
+        public ProdutoService(LojaPeçasEletronicasContext context)
         {
             _context = context;
         }
 
         public async Task<IEnumerable<Produto>> GetProdutosAsync()
         {
-            return await _context.Produtos.ToListAsync();
+            return await _context.Produto.ToListAsync();
         }
     }
 }
-*/
